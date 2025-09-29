@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Your_Strong_Password123!"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+      - ./db-init:/docker-entrypoint-initdb.d
+
+  fipe-api:
+    build:
+      context: ./FipeApi
+      dockerfile: Dockerfile
+    ports:
+      - "5001:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=FipeDB;User Id=sa;Password=Your_Strong_Password123!;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - fipe-api
+
+volumes:
+  sqlserver_data:
