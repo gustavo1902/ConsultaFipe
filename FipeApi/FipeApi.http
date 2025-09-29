@@ -1,0 +1,6 @@
+@FipeApi_HostAddress = http://localhost:5027
+
+GET {{FipeApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
