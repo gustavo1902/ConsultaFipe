@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Tabela FIPE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <div class="header">
+            <h1>Consulta Tabela FIPE</h1>
+            <p>Descubra o valor de mercado do seu veículo</p>
+        </div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="tipo">Tipo de Veículo</label>
+                <select id="tipo">
+                    <option value="" disabled selected>Selecione o tipo</option>
+                    <option value="carros">Carros</option>
+                    <option value="motos">Motos</option>
+                    <option value="caminhoes">Caminhões</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="marca">Marca</label>
+                <select id="marca" disabled>
+                    <option value="">Aguardando tipo...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="modelo">Modelo</label>
+                <select id="modelo" disabled>
+                    <option value="">Aguardando marca...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ano">Ano</label>
+                <select id="ano" disabled>
+                    <option value="">Aguardando modelo...</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="loader" class="loader-container hidden">
+            <div class="loader"></div>
+            <p>Consultando...</p>
+        </div>
+
+        <div id="resultado" class="resultado-container hidden">
+            </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
