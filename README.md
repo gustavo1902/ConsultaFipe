@@ -50,7 +50,7 @@ Para executar este projeto em sua máquina local, você precisará ter o Git e o
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/gustavo1902/ConsultaFipe.git](https://github.com/gustavo1902/ConsultaFipe.git)
+    git clone [https://github.com/gustavo1902/ConsultaFipe.git]
     ```
 
 2.  **Navegue até a pasta do projeto:**
