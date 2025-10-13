@@ -59,9 +59,9 @@ Para executar este projeto em sua máquina local, você precisará ter o Git e o
     ```
 
 3.  **Inicie os containers:**
-    Na raiz do projeto, execute o seguinte comando. Ele irá construir as imagens necessárias, criar e iniciar os containers em segundo plano.
+    Na raiz do projeto, execute o seguinte comando. Ele irá construir as imagens necessárias, criar e iniciar os containers.
     ```bash
-    docker-compose up --build -d
+    docker-compose up --build
     ```
 
 4.  **Acesse a aplicação:**
